@@ -10,6 +10,7 @@ path = require('path');
 
 module.exports = function (app) {
   
+  app.use('/api/clientes', require('./api/clientes'));
 
   app.use('/',(req, res, next) => {
     var pg = require('pg');
